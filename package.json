@@ -10,6 +10,6 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.1",
     "express": "^4.19.2",
-    "zaproxy": "^2.0.0"
+    "zaproxy": "2.0.0-rc.7"
   }
 }
