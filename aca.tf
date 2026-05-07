@@ -58,6 +58,3 @@ resource "azurerm_container_app" "zap_mcp" {
   }
 }
 
-output "aca_url" {
-  value = azurerm_container_app.zap_mcp.latest_revision_fqdn
-}
