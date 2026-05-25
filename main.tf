@@ -18,5 +18,5 @@ resource "azurerm_dns_cname_record" "record" {
   resource_group_name = var.dns_resource_group_name
   zone_name           = var.dns_zone
   ttl                 = 3600
-  record              = azurerm_container_app.zap_mcp.latest_revision_fqdn
+  record              = azurerm_container_app.zap_mcp.ingress[0].fqdn
 }
