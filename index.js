@@ -120,7 +120,8 @@ app.post("/messages", async (req, res) => {
   await transport.handlePostMessage(req, res);
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+// Hardcode port 3000 to match Azure Container Apps target_port
+const PORT = 3000;
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`ZAP MCP Server listening on port ${PORT}`);
 });
