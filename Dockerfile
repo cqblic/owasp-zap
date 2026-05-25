@@ -22,7 +22,7 @@ COPY index.js ./
 # Create a startup script
 RUN echo '#!/bin/bash\n\
 # Start ZAP in headless mode in the background\n\
-zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.active=true &\n\
+zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config api.addrs.addr.active=true &\n\
 \n\
 echo "ZAP is starting in the background..."\n\
 echo "Starting MCP server immediately to pass Azure health probes..."\n\
